@@ -25,13 +25,18 @@ Requires Python 3.11+.
 ## Web UI
 
 ```bash
-uvicorn candidate_transformer.ui:app --reload
+python run_web.py
 # open http://localhost:8000
 ```
 
 Single-page interface: upload up to 4 source files, pick a config (default or
 custom), click **Run Pipeline**. Results show candidate count, merge/review
 breakdown, confidence range, and the full projected JSON output.
+
+> **Note:** use `python run_web.py` rather than `uvicorn ... --reload` directly.
+> The launcher inserts `src/` into `sys.path` before uvicorn loads the app and
+> restricts the reloader to `src/` only — this prevents a reload-loop caused by
+> pip writing files into `.venv/` during the setuptools install.
 
 ---
 
