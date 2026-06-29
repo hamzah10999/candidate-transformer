@@ -13,6 +13,7 @@ unparseable or contested values degrade to `null` rather than being guessed.
 ```bash
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install setuptools             # required for editable install on Python 3.13
 pip install -e ".[dev]"            # CLI + tests
 pip install -e ".[dev,web]"        # also installs FastAPI UI dependencies
 ```
