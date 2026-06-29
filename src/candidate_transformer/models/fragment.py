@@ -22,7 +22,16 @@ class Fragment(BaseModel):
     raw_value: Any       # exactly what the adapter read — str, list, dict, etc.
     provenance: Provenance
 
-    # The adapter sets this when it can: the raw email or phone it saw.
-    # The merge stage uses it to group fragments into candidate clusters
-    # without comparing all pairs.
-    candidate_hint: str | None = None
+    # Grouping key used by the merge stage to cluster fragments into candidates
+    # without comparing every fragment against every other (avoids O(n^2)).
+    #
+    # Contract: adapters MUST always set this — never leave it None.
+    #   Strong key available  -> normalized email or E.164 phone (preferred)
+    #   No strong key         -> SHA-256 hex of the adapter's raw record bytes
+    #
+    # This matches the spec's candidate_id fallback chain (email -> phone ->
+    # content hash). A GitHub-only or notes-only fragment that carries no email
+    # and no phone uses a content hash so it becomes its own single-source
+    # candidate rather than being silently dropped or merged with unrelated
+    # None-hint fragments.
+    candidate_hint: str
