@@ -13,10 +13,24 @@ unparseable or contested values degrade to `null` rather than being guessed.
 ```bash
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
-pip install -e ".[dev]"
+pip install -e ".[dev]"            # CLI + tests
+pip install -e ".[dev,web]"        # also installs FastAPI UI dependencies
 ```
 
 Requires Python 3.11+.
+
+---
+
+## Web UI
+
+```bash
+uvicorn candidate_transformer.ui:app --reload
+# open http://localhost:8000
+```
+
+Single-page interface: upload up to 4 source files, pick a config (default or
+custom), click **Run Pipeline**. Results show candidate count, merge/review
+breakdown, confidence range, and the full projected JSON output.
 
 ---
 

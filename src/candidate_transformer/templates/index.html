@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Transformer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f4f5;
+      color: #18181b;
+      padding: 2rem 1rem;
+    }
+
+    .page { max-width: 860px; margin: 0 auto; }
+
+    header { margin-bottom: 2rem; }
+    header h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; }
+    header p  { color: #71717a; font-size: 0.85rem; margin-top: 0.25rem; }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e4e4e7;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .card-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #71717a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Form fields ── */
+    .field { margin-bottom: 1.25rem; }
+    .field:last-child { margin-bottom: 0; }
+    .field > label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .hint { font-size: 0.75rem; color: #a1a1aa; margin-top: 0.3rem; }
+
+    input[type="file"] {
+      display: block;
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: 2px dashed #d4d4d8;
+      border-radius: 8px;
+      background: #fafafa;
+      font-size: 0.85rem;
+      color: #52525b;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    input[type="file"]:hover { border-color: #a1a1aa; }
+
+    .radio-group { display: flex; gap: 0.75rem; }
+    .radio-option {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid #e4e4e7;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .radio-option:has(input:checked) {
+      border-color: #18181b;
+      background: #fafafa;
+    }
+    .radio-option input[type="radio"] { margin-top: 3px; flex-shrink: 0; }
+    .radio-text strong { display: block; font-size: 0.875rem; font-weight: 600; }
+    .radio-text span   { font-size: 0.75rem; color: #71717a; line-height: 1.4; }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 0.8rem;
+      background: #18181b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 1.25rem;
+    }
+    button[type="submit"]:hover { background: #3f3f46; }
+
+    /* ── Error banner ── */
+    .error-banner {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      color: #991b1b;
+      font-size: 0.875rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Results ── */
+    .file-log {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .file-badge {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 5px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.75rem;
+      color: #166534;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-box {
+      background: #f4f4f5;
+      border: 1px solid #e4e4e7;
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      text-align: center;
+    }
+    .stat-box .val {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #18181b;
+    }
+    .stat-box .val.small { font-size: 1.1rem; padding-top: 0.45rem; }
+    .stat-box .lbl {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #71717a;
+      margin-top: 0.3rem;
+    }
+    .stat-box.warn .val { color: #b45309; }
+
+    .json-output {
+      background: #18181b;
+      color: #d4d4d8;
+      border-radius: 8px;
+      padding: 1.25rem;
+      font-family: "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      overflow: auto;
+      max-height: 560px;
+      white-space: pre;
+    }
+    /* simple JSON syntax tint */
+    .json-output .k { color: #93c5fd; }   /* keys  */
+    .json-output .s { color: #86efac; }   /* strings */
+    .json-output .n { color: #fda4af; }   /* numbers */
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Candidate Transformer</h1>
+    <p>Multi-source candidate deduplication · field-level confidence · provenance tracking</p>
+  </header>
+
+  <!-- ── Input card ── -->
+  <div class="card">
+    <div class="card-title">Pipeline inputs</div>
+
+    {% if error %}
+    <div class="error-banner">{{ error }}</div>
+    {% endif %}
+
+    <form action="/run" method="post" enctype="multipart/form-data">
+
+      <div class="field">
+        <label for="sources">Source files</label>
+        <input type="file" id="sources" name="sources" multiple accept=".csv,.json,.txt">
+        <p class="hint">Upload up to 4 files — recruiter CSV, ATS JSON, GitHub JSON fixture, notes TXT</p>
+      </div>
+
+      <div class="field">
+        <label>Output config</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="config" value="default"
+              {% if config != "custom" %}checked{% endif %}>
+            <div class="radio-text">
+              <strong>Default</strong>
+              <span>All canonical fields · confidence + provenance attached · on_missing: null</span>
+            </div>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="config" value="custom"
+              {% if config == "custom" %}checked{% endif %}>
+            <div class="radio-text">
+              <strong>Custom</strong>
+              <span>Assignment spec · name, email, phone (E164), skills only</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit">Run Pipeline</button>
+    </form>
+  </div>
+
+  <!-- ── Results card (only after a run) ── -->
+  {% if stats is defined %}
+  <div class="card">
+    <div class="card-title">Results</div>
+
+    {% if file_log %}
+    <div class="file-log">
+      {% for name, n in file_log %}
+      <span class="file-badge">{{ name }} · {{ n }} record{% if n != 1 %}s{% endif %}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="val">{{ stats.total }}</div>
+        <div class="lbl">Candidates</div>
+      </div>
+      <div class="stat-box">
+        <div class="val">{{ stats.merged }}</div>
+        <div class="lbl">Merged</div>
+      </div>
+      <div class="stat-box {% if stats.needs_review %}warn{% endif %}">
+        <div class="val">{{ stats.needs_review }}</div>
+        <div class="lbl">Needs review</div>
+      </div>
+      <div class="stat-box">
+        <div class="val small">{{ stats.conf_range }}</div>
+        <div class="lbl">Confidence</div>
+      </div>
+      {% if stats.proj_errors %}
+      <div class="stat-box warn">
+        <div class="val">{{ stats.proj_errors }}</div>
+        <div class="lbl">Proj errors</div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="json-output">{{ results_json }}</div>
+  </div>
+  {% endif %}
+
+</div>
+</body>
+</html>
