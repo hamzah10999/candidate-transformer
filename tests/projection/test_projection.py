@@ -1,4 +1,5 @@
 """Tests for the projection engine: path resolution, normalise, on_missing, schema."""
+import inspect
 import json
 import pytest
 
@@ -23,7 +24,11 @@ from candidate_transformer.projection.engine import (
     ProjectionValidationError,
     project,
 )
-from candidate_transformer.projection._paths import resolve_path, MissingFieldError
+from candidate_transformer.projection._paths import (
+    FIELD_VALUE_FIELDS,
+    MissingFieldError,
+    resolve_path,
+)
 
 
 # ── Fixtures ──────────────────────────────────────────────────────────────
@@ -72,6 +77,29 @@ def _config(
             "on_missing": on_missing,
         },
     })
+
+
+# ── FIELD_VALUE_FIELDS sync check ────────────────────────────────────────
+
+def test_field_value_fields_matches_canonical_model():
+    """FIELD_VALUE_FIELDS must equal every FieldValue-typed field on CandidateProfile.
+
+    This test re-derives the expected set independently so that a bug in the
+    derivation logic itself (wrong base class, wrong model) will cause a failure
+    here rather than silently dropping _confidence/_provenance in production.
+    If a new FieldValue field is added to CandidateProfile and the derivation
+    is broken, this test catches it immediately.
+    """
+    expected = frozenset(
+        name
+        for name, field in CandidateProfile.model_fields.items()
+        if inspect.isclass(field.annotation) and issubclass(field.annotation, FieldValue)
+    )
+    assert FIELD_VALUE_FIELDS == expected, (
+        f"FIELD_VALUE_FIELDS is out of sync with CandidateProfile.\n"
+        f"  Present in FIELD_VALUE_FIELDS but not in model : {FIELD_VALUE_FIELDS - expected}\n"
+        f"  Present in model but missing from FIELD_VALUE_FIELDS: {expected - FIELD_VALUE_FIELDS}"
+    )
 
 
 # ── Path resolution unit tests ────────────────────────────────────────────

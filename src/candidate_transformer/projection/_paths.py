@@ -1,16 +1,26 @@
 from __future__ import annotations
+import inspect
 import re
 from typing import Any
 
-from ..models.canonical import FieldValue
+from ..models.canonical import CandidateProfile, FieldValue
 
 _INDEX_RE = re.compile(r'^(\w+)\[(\d+)\](.*)$')
 _WILDCARD_RE = re.compile(r'^(\w+)\[\](.*)$')
 
-# Fields whose canonical type is FieldValue[str] on CandidateProfile.
-# Used by the projection engine to know when to attach _confidence / _provenance.
+
+def _is_field_value(ann: Any) -> bool:
+    # Pydantic v2 evaluates FieldValue[str] into a concrete parametrized class,
+    # so get_origin() returns None. issubclass is the correct check.
+    return inspect.isclass(ann) and issubclass(ann, FieldValue)
+
+
+# Derived at import time from CandidateProfile.model_fields so it stays in
+# sync automatically when new FieldValue fields are added to the model.
 FIELD_VALUE_FIELDS: frozenset[str] = frozenset(
-    {"name", "current_company", "title", "location", "bio", "github_url"}
+    name
+    for name, field in CandidateProfile.model_fields.items()
+    if _is_field_value(field.annotation)
 )
 
 
