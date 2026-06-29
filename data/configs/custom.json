@@ -1,0 +1,14 @@
+{
+  "_comment": "Compact recruiter view: name + primary contact only, NATIONAL phone format, confidence metadata attached.",
+  "fields": [
+    { "path": "name",           "from": "name",      "type": "string", "required": true  },
+    { "path": "email",          "from": "emails[0]", "type": "string", "required": false },
+    { "path": "phone_national", "from": "phones[0]", "type": "string", "required": false, "normalize": "national" },
+    { "path": "skills",         "from": "skills[].name", "type": "array", "required": false }
+  ],
+  "globals": {
+    "include_confidence": true,
+    "include_provenance": false,
+    "on_missing": "omit"
+  }
+}

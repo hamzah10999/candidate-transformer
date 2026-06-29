@@ -1,0 +1,6 @@
+name,email,phone,current_company,title
+Alice Müller,alice@example.com,+14155552671,Acme Corp,Senior Engineer
+Bob Ramirez,bob@ramirez.dev,,Globex,Data Scientist
+Carol Singh,carol@singh.io,4155559999,Initech,Product Manager
+Bob Ramirez,b.ramirez@work.com,+15105550198,Globex,Data Scientist
+Dana Kim,dana@kim.com,+82-2-555-1234,KoreaTech,ML Engineer

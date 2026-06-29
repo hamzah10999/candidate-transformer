@@ -1,0 +1,33 @@
+[
+  {
+    "candidate_name": "Alice Mueller",
+    "contact_email": "alice@example.com",
+    "contact_phone": "+1 415 555 2671",
+    "employer": "Acme Corp",
+    "position": "Senior Software Engineer",
+    "country": "US",
+    "summary": "Backend-focused engineer with 8 years of distributed systems experience.",
+    "profile_url": "https://github.com/alicemueller",
+    "tags": ["Python", "Go", "Kubernetes", "AWS"]
+  },
+  {
+    "candidate_name": "Bob Ramirez",
+    "contact_email": "b.ramirez@work.com",
+    "contact_phone": "+15105550198",
+    "employer": "Globex",
+    "position": "Senior Data Scientist",
+    "country": "US",
+    "summary": "ML practitioner specialising in NLP and recommendation systems.",
+    "tags": ["Python", "PyTorch", "Spark", "SQL"]
+  },
+  {
+    "candidate_name": "Eve Nakamura",
+    "contact_email": "eve@nakamura.jp",
+    "contact_phone": null,
+    "employer": "Startup Inc",
+    "position": "Frontend Engineer",
+    "country": "JP",
+    "summary": null,
+    "tags": ["TypeScript", "React", "GraphQL"]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "login": "alicemueller",
+    "name": "Alice Müller",
+    "email": "alice@example.com",
+    "bio": "Open-source contributor. Opinions my own.",
+    "location": "San Francisco, CA",
+    "html_url": "https://github.com/alicemueller",
+    "repos": [
+      {"language": "Python"},
+      {"language": "Go"},
+      {"language": "Python"},
+      {"language": "Shell"}
+    ]
+  },
+  {
+    "login": "eve-nakamura",
+    "name": "Eve Nakamura",
+    "email": null,
+    "bio": null,
+    "location": "Tokyo, Japan",
+    "html_url": "https://github.com/eve-nakamura",
+    "repos": [
+      {"language": "TypeScript"},
+      {"language": "JavaScript"},
+      {"language": "TypeScript"}
+    ]
+  }
+]

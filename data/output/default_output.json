@@ -1,0 +1,118 @@
+[
+  {
+    "candidate_id": "889e87fc03d04778",
+    "full_name": "Alice Müller",
+    "email": "alice@example.com",
+    "phone": "+14155552671",
+    "company": "Acme Corp",
+    "title": "Senior Software Engineer",
+    "location": "US",
+    "bio": "Backend-focused engineer with 8 years of distributed systems experience.",
+    "github_url": "https://github.com/alicemueller",
+    "skills": [
+      "Go",
+      "Python",
+      "AWS",
+      "Kubernetes",
+      "Shell"
+    ],
+    "merge_state": "merged",
+    "confidence": 0.921
+  },
+  {
+    "candidate_id": "3363d36df4ae32a8",
+    "full_name": "Bob Ramirez",
+    "email": "bob@ramirez.dev",
+    "phone": null,
+    "company": "Globex",
+    "title": "Data Scientist",
+    "location": null,
+    "bio": null,
+    "github_url": null,
+    "skills": [],
+    "merge_state": "merged",
+    "confidence": 0.616667
+  },
+  {
+    "candidate_id": "790a24c078de216d",
+    "full_name": "Carol Singh",
+    "email": "carol@singh.io",
+    "phone": "+14155559999",
+    "company": "Initech",
+    "title": "Product Manager",
+    "location": null,
+    "bio": null,
+    "github_url": null,
+    "skills": [],
+    "merge_state": "merged",
+    "confidence": 0.783333
+  },
+  {
+    "candidate_id": "716998d832f0e66a",
+    "full_name": "Bob Ramirez",
+    "email": "b.ramirez@work.com",
+    "phone": "+15105550198",
+    "company": "Globex",
+    "title": "Senior Data Scientist",
+    "location": "US",
+    "bio": "ML practitioner specialising in NLP and recommendation systems.",
+    "github_url": null,
+    "skills": [
+      "PyTorch",
+      "Python",
+      "SQL",
+      "Spark"
+    ],
+    "merge_state": "merged",
+    "confidence": 0.99
+  },
+  {
+    "candidate_id": "6a674e0bda34a9fc",
+    "full_name": "Dana Kim",
+    "email": "dana@kim.com",
+    "phone": "+8225551234",
+    "company": "KoreaTech",
+    "title": "ML Engineer",
+    "location": null,
+    "bio": null,
+    "github_url": null,
+    "skills": [],
+    "merge_state": "single",
+    "confidence": 0.9
+  },
+  {
+    "candidate_id": "b99d6c9ad0cffe45",
+    "full_name": "Eve Nakamura",
+    "email": "eve@nakamura.jp",
+    "phone": null,
+    "company": "Startup Inc",
+    "title": "Frontend Engineer",
+    "location": "JP",
+    "bio": null,
+    "github_url": null,
+    "skills": [
+      "React",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "merge_state": "single",
+    "confidence": 0.6
+  },
+  {
+    "candidate_id": "f036d6a1124518c1",
+    "full_name": "Eve Nakamura",
+    "email": null,
+    "phone": null,
+    "company": null,
+    "title": null,
+    "location": "Tokyo, Japan",
+    "bio": null,
+    "github_url": "https://github.com/eve-nakamura",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "merge_state": "single",
+    "confidence": 0.233333
+  }
+]

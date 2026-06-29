@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Alice Müller",
+    "name_confidence": 0.776,
+    "email": "alice@example.com",
+    "phone_national": "(415) 555-2671",
+    "skills": [
+      "Go",
+      "Python",
+      "AWS",
+      "Kubernetes",
+      "Shell"
+    ]
+  },
+  {
+    "name": "Bob Ramirez",
+    "name_confidence": 0.9,
+    "email": "bob@ramirez.dev",
+    "skills": []
+  },
+  {
+    "name": "Carol Singh",
+    "name_confidence": 0.9,
+    "email": "carol@singh.io",
+    "phone_national": "(415) 555-9999",
+    "skills": []
+  },
+  {
+    "name": "Bob Ramirez",
+    "name_confidence": 0.99,
+    "email": "b.ramirez@work.com",
+    "phone_national": "(510) 555-0198",
+    "skills": [
+      "PyTorch",
+      "Python",
+      "SQL",
+      "Spark"
+    ]
+  },
+  {
+    "name": "Dana Kim",
+    "name_confidence": 0.9,
+    "email": "dana@kim.com",
+    "phone_national": "02-555-1234",
+    "skills": []
+  },
+  {
+    "name": "Eve Nakamura",
+    "name_confidence": 0.9,
+    "email": "eve@nakamura.jp",
+    "skills": [
+      "React",
+      "TypeScript",
+      "GraphQL"
+    ]
+  },
+  {
+    "name": "Eve Nakamura",
+    "name_confidence": 0.7,
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ]
+  }
+]

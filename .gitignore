@@ -2,5 +2,6 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-output/*.json
+# data/output is committed as sample artefacts; exclude only local ad-hoc runs
+local_output/
 *.egg-info/
