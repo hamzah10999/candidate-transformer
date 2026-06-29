@@ -1,7 +1,3 @@
-Spoke with Carol Singh on 2024-11-14. She's currently PM at Initech.
-Reach her at carol@singh.io or +1 415 555 9999.
-Skills mentioned: Agile, SQL, Tableau, stakeholder management.
-Title: Director of Product (updated from earlier note).
-
-Follow-up note: Bob Ramirez also mentioned he's proficient in dbt.
-His contact is bob@ramirez.dev.
+Spoke with Roberto Martinez on 2024-10-22. Great communicator, clearly strong in data engineering.
+Email: bob.martinez@email.com. Skills mentioned: Spark, dbt, stakeholder communication.
+He's been managing a team of 3 at DataFlow — worth flagging for senior roles.

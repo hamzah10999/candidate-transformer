@@ -1,29 +1,18 @@
-[
-  {
-    "login": "alicemueller",
-    "name": "Alice Müller",
-    "email": "alice@example.com",
-    "bio": "Open-source contributor. Opinions my own.",
-    "location": "San Francisco, CA",
-    "html_url": "https://github.com/alicemueller",
-    "repos": [
-      {"language": "Python"},
-      {"language": "Go"},
-      {"language": "Python"},
-      {"language": "Shell"}
-    ]
-  },
-  {
-    "login": "eve-nakamura",
-    "name": "Eve Nakamura",
-    "email": null,
-    "bio": null,
-    "location": "Tokyo, Japan",
-    "html_url": "https://github.com/eve-nakamura",
-    "repos": [
-      {"language": "TypeScript"},
-      {"language": "JavaScript"},
-      {"language": "TypeScript"}
-    ]
-  }
-]
+{
+  "login": "alicechen",
+  "name": "Alice Chen",
+  "email": "alice.chen@email.com",
+  "bio": "Building distributed systems. Open-source contributor. she/her.",
+  "location": "San Jose, CA",
+  "html_url": "https://github.com/alicechen",
+  "public_repos": 34,
+  "repos": [
+    {"language": "Python"},
+    {"language": "Go"},
+    {"language": "Python"},
+    {"language": "Shell"},
+    {"language": "Python"},
+    {"language": "TypeScript"},
+    {"language": null}
+  ]
+}

@@ -1,118 +1,178 @@
 [
   {
-    "candidate_id": "889e87fc03d04778",
-    "full_name": "Alice Müller",
-    "email": "alice@example.com",
-    "phone": "+14155552671",
-    "company": "Acme Corp",
+    "candidate_id": "b3462b72213cdaa4",
+    "full_name": "Alice Chen",
+    "full_name_confidence": 0.997,
+    "full_name_provenance": [
+      {
+        "source": "csv",
+        "method": "direct"
+      },
+      {
+        "source": "ats",
+        "method": "direct"
+      },
+      {
+        "source": "github",
+        "method": "api_field"
+      }
+    ],
+    "email": "alice.chen@email.com",
+    "phone": "+14085551234",
+    "company": "TechCorp",
+    "company_confidence": 0.99,
+    "company_provenance": [
+      {
+        "source": "csv",
+        "method": "direct"
+      },
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
     "title": "Senior Software Engineer",
+    "title_confidence": 0.72,
+    "title_provenance": [
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
     "location": "US",
-    "bio": "Backend-focused engineer with 8 years of distributed systems experience.",
-    "github_url": "https://github.com/alicemueller",
+    "location_confidence": 0.72,
+    "location_provenance": [
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
+    "bio": "Full-stack engineer with 6 years of experience in Python and distributed systems.",
+    "bio_confidence": 0.72,
+    "bio_provenance": [
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
+    "github_url": "https://github.com/alicechen",
+    "github_url_confidence": 0.97,
+    "github_url_provenance": [
+      {
+        "source": "ats",
+        "method": "direct"
+      },
+      {
+        "source": "github",
+        "method": "api_field"
+      }
+    ],
     "skills": [
       "Go",
       "Python",
-      "AWS",
       "Kubernetes",
+      "PostgreSQL",
+      "TypeScript",
       "Shell"
     ],
     "merge_state": "merged",
-    "confidence": 0.921
+    "confidence": 0.994667
   },
   {
-    "candidate_id": "3363d36df4ae32a8",
-    "full_name": "Bob Ramirez",
-    "email": "bob@ramirez.dev",
-    "phone": null,
-    "company": "Globex",
-    "title": "Data Scientist",
-    "location": null,
-    "bio": null,
-    "github_url": null,
-    "skills": [],
-    "merge_state": "merged",
-    "confidence": 0.616667
-  },
-  {
-    "candidate_id": "790a24c078de216d",
-    "full_name": "Carol Singh",
-    "email": "carol@singh.io",
-    "phone": "+14155559999",
-    "company": "Initech",
-    "title": "Product Manager",
-    "location": null,
-    "bio": null,
-    "github_url": null,
-    "skills": [],
-    "merge_state": "merged",
-    "confidence": 0.783333
-  },
-  {
-    "candidate_id": "716998d832f0e66a",
-    "full_name": "Bob Ramirez",
-    "email": "b.ramirez@work.com",
-    "phone": "+15105550198",
-    "company": "Globex",
-    "title": "Senior Data Scientist",
+    "candidate_id": "c4c21dac89d77948",
+    "full_name": "Bob Martinez",
+    "full_name_confidence": 0.99,
+    "full_name_provenance": [
+      {
+        "source": "csv",
+        "method": "direct"
+      },
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
+    "email": "bob.martinez@email.com",
+    "phone": "+14085559876",
+    "company": "DataFlow Inc",
+    "company_confidence": 0.99,
+    "company_provenance": [
+      {
+        "source": "csv",
+        "method": "direct"
+      },
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
+    "title": "Senior Data Analyst",
+    "title_confidence": 0.72,
+    "title_provenance": [
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
     "location": "US",
-    "bio": "ML practitioner specialising in NLP and recommendation systems.",
+    "location_confidence": 0.9,
+    "location_provenance": [
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
+    "bio": "Data professional specialising in pipeline engineering and BI tooling.",
+    "bio_confidence": 0.9,
+    "bio_provenance": [
+      {
+        "source": "ats",
+        "method": "direct"
+      }
+    ],
     "github_url": null,
     "skills": [
-      "PyTorch",
       "Python",
       "SQL",
-      "Spark"
+      "Airflow",
+      "dbt"
     ],
     "merge_state": "merged",
-    "confidence": 0.99
+    "confidence": 0.991667
   },
   {
-    "candidate_id": "6a674e0bda34a9fc",
-    "full_name": "Dana Kim",
-    "email": "dana@kim.com",
-    "phone": "+8225551234",
-    "company": "KoreaTech",
-    "title": "ML Engineer",
+    "candidate_id": "87bcd9a9307c2504",
+    "full_name": "Carol White",
+    "full_name_confidence": 0.9,
+    "full_name_provenance": [
+      {
+        "source": "csv",
+        "method": "direct"
+      }
+    ],
+    "email": "carol.white@email.com",
+    "phone": "+14085550011",
+    "company": "Legacy Systems",
+    "company_confidence": 0.9,
+    "company_provenance": [
+      {
+        "source": "csv",
+        "method": "direct"
+      }
+    ],
+    "title": "QA Engineer",
+    "title_confidence": 0.9,
+    "title_provenance": [
+      {
+        "source": "csv",
+        "method": "direct"
+      }
+    ],
     "location": null,
     "bio": null,
     "github_url": null,
     "skills": [],
     "merge_state": "single",
     "confidence": 0.9
-  },
-  {
-    "candidate_id": "b99d6c9ad0cffe45",
-    "full_name": "Eve Nakamura",
-    "email": "eve@nakamura.jp",
-    "phone": null,
-    "company": "Startup Inc",
-    "title": "Frontend Engineer",
-    "location": "JP",
-    "bio": null,
-    "github_url": null,
-    "skills": [
-      "React",
-      "TypeScript",
-      "GraphQL"
-    ],
-    "merge_state": "single",
-    "confidence": 0.6
-  },
-  {
-    "candidate_id": "f036d6a1124518c1",
-    "full_name": "Eve Nakamura",
-    "email": null,
-    "phone": null,
-    "company": null,
-    "title": null,
-    "location": "Tokyo, Japan",
-    "bio": null,
-    "github_url": "https://github.com/eve-nakamura",
-    "skills": [
-      "JavaScript",
-      "TypeScript"
-    ],
-    "merge_state": "single",
-    "confidence": 0.233333
   }
 ]

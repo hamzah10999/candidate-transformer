@@ -1,65 +1,35 @@
 [
   {
-    "name": "Alice Müller",
-    "name_confidence": 0.776,
-    "email": "alice@example.com",
-    "phone_national": "(415) 555-2671",
+    "full_name": "Alice Chen",
+    "full_name_confidence": 0.997,
+    "primary_email": "alice.chen@email.com",
+    "phone": "+14085551234",
     "skills": [
       "Go",
       "Python",
-      "AWS",
       "Kubernetes",
+      "PostgreSQL",
+      "TypeScript",
       "Shell"
     ]
   },
   {
-    "name": "Bob Ramirez",
-    "name_confidence": 0.9,
-    "email": "bob@ramirez.dev",
-    "skills": []
-  },
-  {
-    "name": "Carol Singh",
-    "name_confidence": 0.9,
-    "email": "carol@singh.io",
-    "phone_national": "(415) 555-9999",
-    "skills": []
-  },
-  {
-    "name": "Bob Ramirez",
-    "name_confidence": 0.99,
-    "email": "b.ramirez@work.com",
-    "phone_national": "(510) 555-0198",
+    "full_name": "Bob Martinez",
+    "full_name_confidence": 0.99,
+    "primary_email": "bob.martinez@email.com",
+    "phone": "+14085559876",
     "skills": [
-      "PyTorch",
       "Python",
       "SQL",
-      "Spark"
+      "Airflow",
+      "dbt"
     ]
   },
   {
-    "name": "Dana Kim",
-    "name_confidence": 0.9,
-    "email": "dana@kim.com",
-    "phone_national": "02-555-1234",
+    "full_name": "Carol White",
+    "full_name_confidence": 0.9,
+    "primary_email": "carol.white@email.com",
+    "phone": "+14085550011",
     "skills": []
-  },
-  {
-    "name": "Eve Nakamura",
-    "name_confidence": 0.9,
-    "email": "eve@nakamura.jp",
-    "skills": [
-      "React",
-      "TypeScript",
-      "GraphQL"
-    ]
-  },
-  {
-    "name": "Eve Nakamura",
-    "name_confidence": 0.7,
-    "skills": [
-      "JavaScript",
-      "TypeScript"
-    ]
   }
 ]

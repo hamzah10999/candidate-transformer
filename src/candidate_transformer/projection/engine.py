@@ -102,9 +102,10 @@ def _apply_normalize(value: Any, normalize: NormalizeAs) -> Any:
         if normalize == NormalizeAs.E164:
             return value.e164
         if normalize == NormalizeAs.NATIONAL:
-            # Re-parse from E.164 so libphonenumber can format with country context.
             parsed = phonenumbers.parse(value.e164)
             return phonenumbers.format_number(
                 parsed, phonenumbers.PhoneNumberFormat.NATIONAL
             )
+    # CANONICAL is a no-op — skill names are already canonicalized by the
+    # normalizer; other string values pass through unchanged.
     return value

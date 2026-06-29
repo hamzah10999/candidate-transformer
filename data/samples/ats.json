@@ -1,33 +1,24 @@
 [
   {
-    "candidate_name": "Alice Mueller",
-    "contact_email": "alice@example.com",
-    "contact_phone": "+1 415 555 2671",
-    "employer": "Acme Corp",
+    "candidate_name": "Alice Chen",
+    "contact_email": "alice.chen@email.com",
+    "contact_phone": "+14085551234",
+    "employer": "TechCorp",
     "position": "Senior Software Engineer",
     "country": "US",
-    "summary": "Backend-focused engineer with 8 years of distributed systems experience.",
-    "profile_url": "https://github.com/alicemueller",
-    "tags": ["Python", "Go", "Kubernetes", "AWS"]
+    "summary": "Full-stack engineer with 6 years of experience in Python and distributed systems.",
+    "profile_url": "https://github.com/alicechen",
+    "tags": ["Python", "Go", "Kubernetes", "PostgreSQL"]
   },
   {
-    "candidate_name": "Bob Ramirez",
-    "contact_email": "b.ramirez@work.com",
-    "contact_phone": "+15105550198",
-    "employer": "Globex",
-    "position": "Senior Data Scientist",
+    "candidate_name": "Bob Martinez",
+    "contact_email": "bob.martinez@email.com",
+    "contact_phone": "+14085559876",
+    "employer": "DataFlow Inc",
+    "position": "Senior Data Analyst",
     "country": "US",
-    "summary": "ML practitioner specialising in NLP and recommendation systems.",
-    "tags": ["Python", "PyTorch", "Spark", "SQL"]
-  },
-  {
-    "candidate_name": "Eve Nakamura",
-    "contact_email": "eve@nakamura.jp",
-    "contact_phone": null,
-    "employer": "Startup Inc",
-    "position": "Frontend Engineer",
-    "country": "JP",
-    "summary": null,
-    "tags": ["TypeScript", "React", "GraphQL"]
+    "summary": "Data professional specialising in pipeline engineering and BI tooling.",
+    "profile_url": null,
+    "tags": ["Python", "SQL", "dbt", "Airflow"]
   }
 ]

@@ -1,21 +1,21 @@
 {
   "fields": [
-    { "path": "candidate_id",   "from": "candidate_id",           "type": "string",  "required": true  },
-    { "path": "full_name",      "from": "name",                   "type": "string",  "required": false },
-    { "path": "email",          "from": "emails[0]",              "type": "string",  "required": false },
-    { "path": "phone",          "from": "phones[0]",              "type": "string",  "required": false, "normalize": "e164" },
-    { "path": "company",        "from": "current_company",        "type": "string",  "required": false },
-    { "path": "title",          "from": "title",                  "type": "string",  "required": false },
-    { "path": "location",       "from": "location",               "type": "string",  "required": false },
-    { "path": "bio",            "from": "bio",                    "type": "string",  "required": false },
-    { "path": "github_url",     "from": "github_url",             "type": "string",  "required": false },
-    { "path": "skills",         "from": "skills[].name",          "type": "array",   "required": false },
-    { "path": "merge_state",    "from": "merge_state",            "type": "string",  "required": false },
-    { "path": "confidence",     "from": "overall_confidence",     "type": "number",  "required": false }
+    { "path": "candidate_id",  "from": "candidate_id",       "type": "string", "required": true  },
+    { "path": "full_name",     "from": "name",               "type": "string"                    },
+    { "path": "email",         "from": "emails[0]",          "type": "string"                    },
+    { "path": "phone",         "from": "phones[0]",          "type": "string", "normalize": "e164" },
+    { "path": "company",       "from": "current_company",    "type": "string"                    },
+    { "path": "title",         "from": "title",              "type": "string"                    },
+    { "path": "location",      "from": "location",           "type": "string"                    },
+    { "path": "bio",           "from": "bio",                "type": "string"                    },
+    { "path": "github_url",    "from": "github_url",         "type": "string"                    },
+    { "path": "skills",        "from": "skills[].name",      "type": "array"                     },
+    { "path": "merge_state",   "from": "merge_state",        "type": "string"                    },
+    { "path": "confidence",    "from": "overall_confidence", "type": "number"                    }
   ],
   "globals": {
-    "include_confidence": false,
-    "include_provenance": false,
+    "include_confidence": true,
+    "include_provenance": true,
     "on_missing": "null"
   }
 }
