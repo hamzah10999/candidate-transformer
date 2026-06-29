@@ -1,0 +1,35 @@
+[
+  {
+    "full_name": "Alice Chen",
+    "full_name_confidence": 0.997,
+    "primary_email": "alice.chen@email.com",
+    "phone": "+14085551234",
+    "skills": [
+      "Go",
+      "Python",
+      "Kubernetes",
+      "PostgreSQL",
+      "TypeScript",
+      "Shell"
+    ]
+  },
+  {
+    "full_name": "Bob Martinez",
+    "full_name_confidence": 0.99,
+    "primary_email": "bob.martinez@email.com",
+    "phone": "+14085559876",
+    "skills": [
+      "Python",
+      "SQL",
+      "Airflow",
+      "dbt"
+    ]
+  },
+  {
+    "full_name": "Carol White",
+    "full_name_confidence": 0.9,
+    "primary_email": "carol.white@email.com",
+    "phone": "+14085550011",
+    "skills": []
+  }
+]
