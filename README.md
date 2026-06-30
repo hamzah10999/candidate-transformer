@@ -40,7 +40,7 @@ breakdown, confidence range, and the full projected JSON output.
 
 ---
 
-## Run
+## Run Commands for CLI
 
 ```bash
 # Full output — all fields, confidence + provenance attached
